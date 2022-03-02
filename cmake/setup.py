@@ -123,16 +123,16 @@ class CMakeBuild(build_ext):
 ### end ###
 
 setup(
-    name='slz',
-    description='slz',
+    name='pybind11_playground',
+    description='pybind11_playground',
     long_description=open("../README.md").read(),
     version='0.0.0.1',
-    url='https://github.com/cielavenir/python-slz',
-    license='PSF',
+    url='https://github.com/cielavenir/pybind11_playground',
+    license='CC0',
     author='cielavenir',
     author_email='cielartisan@gmail.com',
     #setup_requires=["pybind11"],
-    ext_modules=[CMakeExtension('slz')],
+    ext_modules=[CMakeExtension('pybind11_playground')],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     include_package_data=True,

@@ -12,18 +12,18 @@ except ImportError:
 
 ext_modules = [
     Pybind11Extension(
-        "slz",
-        ['src/pyslz.cpp', 'src/libslz/src/slz.c'],  # Sort source files for reproducibility
+        "pybind11_playground",
+        ['src/pybind11_playground.cpp'],  # Sort source files for reproducibility
     ),
 ]
 
 setup(
-    name='slz',
+    name='pybind11_playground',
     description='a (quick) binding for libslz',
     long_description=open("README.md").read(),
     version='0.0.0.1',
-    url='https://github.com/cielavenir/python-slz',
-    license='PSF',
+    url='https://github.com/cielavenir/pybind11_playground',
+    license='CC0',
     author='cielavenir',
     author_email='cielartisan@gmail.com',
     setup_requires=["pybind11"],
