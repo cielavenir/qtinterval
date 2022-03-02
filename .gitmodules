@@ -1,3 +1,0 @@
-[submodule "src/libslz"]
-	path = src/libslz
-	url = https://github.com/wtarreau/libslz.git
