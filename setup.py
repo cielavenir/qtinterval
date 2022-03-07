@@ -14,6 +14,8 @@ ext_modules = [
     Pybind11Extension(
         "pybind11_playground",
         ['src/pybind11_playground.cpp'],  # Sort source files for reproducibility
+        extra_compile_args=['-O2'],
+        extra_link_args=['-s'],
     ),
 ]
 
