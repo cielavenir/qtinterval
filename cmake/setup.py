@@ -123,8 +123,8 @@ class CMakeBuild(build_ext):
 ### end ###
 
 setup(
-    name='pybind11_playground',
-    description='pybind11_playground',
+    name='qtinterval',
+    description='qtinterval',
     long_description=open("../README.md").read(),
     version='0.0.0.1',
     url='https://github.com/cielavenir/pybind11_playground',
@@ -132,7 +132,7 @@ setup(
     author='cielavenir',
     author_email='cielartisan@gmail.com',
     #setup_requires=["pybind11"],
-    ext_modules=[CMakeExtension('pybind11_playground')],
+    ext_modules=[CMakeExtension('qtinterval')],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     include_package_data=True,
