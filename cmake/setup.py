@@ -8,6 +8,10 @@ import sys
 from setuptools import setup, Extension
 from setuptools.command.build_ext import build_ext
 
+versionContext = {}
+with open('../qtinterval/version.py') as f:
+    exec(f.read(), versionContext)
+
 # Convert distutils Windows platform specifiers to CMake -A arguments
 PLAT_TO_CMAKE = {
     "win32": "Win32",
@@ -126,13 +130,15 @@ setup(
     name='qtinterval',
     description='qtinterval',
     long_description=open("../README.md").read(),
-    version='0.0.0.1',
+    version=versionContext['__version__'],
     url='https://github.com/cielavenir/pybind11_playground',
     license='CC0',
     author='cielavenir',
     author_email='cielartisan@gmail.com',
     #setup_requires=["pybind11"],
-    ext_modules=[CMakeExtension('qtinterval')],
+    package_dir = {'': '..'},
+    packages=['qtinterval'],
+    ext_modules=[CMakeExtension('qtinterval.qtinterval')],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     include_package_data=True,
